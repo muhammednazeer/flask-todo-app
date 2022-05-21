@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-from sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 app = Flask(__name__)
@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html', data =[{
-        'description': 'Check my Mail',
-        'description': 'Repy Whatsapp message',
-        'description': 'Call my Mum',
-    }])
+        'description': 'Check my Mail'},
+        {'description': 'Repy Whatsapp message'},
+        {'description': 'Call my Mum'},
+    ])
 
 
 if __name__ == '__main__':
