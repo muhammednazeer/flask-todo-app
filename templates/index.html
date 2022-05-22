@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <form action="/todos/create" method="POST">
+        <label for="description">Add todo</label>
+        <input type="text" name="description" id="description">
+        <input type="submit" value="Create">
+    </form>
     <ul>
         {% for d in data %}
         <li>{{d.description }}</li>
