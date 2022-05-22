@@ -18,10 +18,17 @@ class Todo(db.Model):
     
 db.create_all()
 
+@app.route('/todos/create', methods=['POST'])
+def create_todo():
+    description = request.form.get('description', '')
+    todo = Todo(description=description)
+    db.session.add(todo)
+    db.session.commit()
+    return redirect(url_for('index'))
+
 @app.route('/')
 def index():
     return render_template('index.html', data = Todo.query.all())
-
 
 
 
