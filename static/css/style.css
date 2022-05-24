@@ -1,0 +1,8 @@
+html,
+body {
+  font: 1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: rgb(225, 240, 250);
+}
+.hidden {
+  display: none;
+}
