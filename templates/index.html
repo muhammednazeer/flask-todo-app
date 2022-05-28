@@ -20,7 +20,9 @@
     <ul id="todo">
         {% for d in data %}
         <li><input class="check-completed" data-id="{{d.id}}" type="checkbox" {% if d.completed %} checked {% endif %}
-                name="" id="">{{d.description }}</li>
+                name="" id="">{{d.description }}
+            <button class="delete" data-id="{{d.id}}">&cross;</button>
+        </li>
         {% endfor %}
     </ul>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
