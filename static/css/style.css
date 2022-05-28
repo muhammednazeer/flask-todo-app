@@ -3,10 +3,34 @@ body {
   font: 1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: rgb(225, 240, 250);
   padding: 0.5rem;
+  width: 100%;
+}
+form {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem;
 }
 .hidden {
   display: none;
 }
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+}
+
+li {
+  clear: both;
+  padding-bottom: 0.5rem;
+}
+
+li button {
+  color: red;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  font: 1.2rem "Helvetica Neue", Helvetica, Arial, sans-serif;
+  float: right;
 }
