@@ -16,6 +16,18 @@ for (let i = 0; i < checkboxes.length; i++) {
         });
     });
 }
+
+const deleteButtons = document.querySelectorAll('.delete-todo');
+for (let i = 0; i < deleteButtons.length; i++) {
+    const button = deleteButtons[i];
+    button.addEventListener('click', (e) => {
+        console.log(e.target.dataset.id);
+        const todoId = e.target.dataset['id'];
+        fetch('/todos/' + todoId, {
+            method: 'DELETE'
+        });
+    });
+}
 const formSubmit = document.getElementById('form');
 formSubmit.addEventListener('submit', (e) => {
     e.preventDefault();
