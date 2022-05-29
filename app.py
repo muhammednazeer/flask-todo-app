@@ -41,6 +41,8 @@ def create_todo():
         todo = Todo(description=description)
         db.session.add(todo)
         db.session.commit()
+        body['id'] = todo.id
+        body['completed'] = todo.completed
         body['description'] = todo.description
     except:
         error = True
